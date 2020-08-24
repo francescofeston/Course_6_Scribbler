@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='../styles/post.css' rel='stylesheet' type='text/css'>
+    <link href='../styles/common.css' rel='stylesheet' type='text/css'>
+    <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="header">
+        <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
+        <input class="headerButton" type="button" onclick="toggleSignUpModal();" value="Sign Up">
+        <input class="headerButton" type="button" onclick="toggleSignInModal();" value="Sign In">
+        <div class="blogName">   
+            <p class="logo">ScriBBler</p>
+            <p class="subHeading">Explore, Imagine, Create</p>
+        </div>
+    </div>
+
+
+    <div class="modal" id="signInModal">
+    <!-- Insert code for Sign In modal here -->
+        <div class="headerModal">
+            <span class="modalClose" onclick="toggleSignInModal();">&times;</span>
+            <h1>Welcome Back!</h1>
+        <hr>
+        <form>
+            <label>Username</label>
+            <input type="text" placeholder="Enter Username" required>
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" required>
+            <input id="signInBtn" type="submit" value="Sign In">
+        </form>
+        <h3>Not a member?
+            <a id="signUpRedirect" onclick="signUpModalRedirect();" href="javascript:void(0);">Sign Up</a>
+        </h3>
+        </div>
+    </div>
+
+    <div class="modal" id="signUpModal">
+    <!-- Insert code for Sign Up modal here -->
+        <div class="headerModal">
+            <span class="modalClose" onclick="toggleSignUpModal();">&times;</span>
+            <h1>Get Started</h1>
+        <hr>
+        <form>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" required>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username" required>
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Re-enter your password" required>
+            <input id="signUpBtn" type="submit" value="Sign Up">
+        </form>
+        </div>
+    </div>
+
+    <div class="postContent">
+        <div class="postTitle">
+            <h4 id="blogTitleNew">Everything you should know about ‘module’ & ‘require’ in Node.js</h4>
+        </div>
+
+        <div class="postAuthor">
+            <!-- Insert code for Edit/Save button and  -->
+            <button id="editPostBtn" onclick="editPost();">Edit <i class="fa fa-edit"></i></button>
+            <p>Srishti Gupta</p>
+        </div>
+
+        <div class="postText">
+            <p id="postBody">
+                Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                named xyz. Let’s take an example to understand this better.
+
+                You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius, as given below:
+                
+                circle.js
+                
+                You can call circle.js file a module named circle.
+                
+                You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular, I mean to say that your code should be independent and should be loosely coupled. Imagine that there’s a large application and you have all your code written in just one place, just one file. Too messy, right?
+                
+                How does the code written inside a module run?
+                Before executing the code written inside a module, Node takes the entire code and encloses it within a function wrapper. The syntax of this function wrapper is: The function wrapper for the circle module will look like the one given below:
+
+                You can see that there is a function wrapper at the root level encompassing all the code written inside the circle module.
+            </p>
+        </div>
+
+        <!-- Insert code for Like button, Comment button, Comment box here-->
+        <div class="likePost">
+            <button id="likeBtn" onclick="likePost();"><i class="fa fa-thumbs-up"> Like</i></button>
+            <p id="likeText">Be the first one to like this!</p>
+        </div>
+
+        <div class="postComments">
+            <textarea id="userComment" placeholder="Leave a comment..."></textarea>
+            <button id="addUserCommentBtn" onclick="addUserComment(userComment);">Comment</button>
+            <h4>All Comments</h4>
+            <div id="userCommentList"></div>
+        </div>
+    </div>
+
+    <script src="../scripts/post.js" defer></script>
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>
