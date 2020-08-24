@@ -12,7 +12,7 @@ function toggleCreatePostModal() {
 }
 
 function allPostsRedirect() {
-    window.location.href = 'html/postlist.html';
+    window.location.href = 'html/postslist.html';
 }
 
 document.getElementById('allPosts').addEventListener('click', allPostsRedirect);
