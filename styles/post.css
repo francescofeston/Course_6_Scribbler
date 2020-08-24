@@ -9,8 +9,8 @@
 }
 .postAuthor {
     /* padding: 0px 0px 0px 10px; */
-    font-family: 'Niconne', cursive;
-    font-size: 30px;
+    font-family: Ubuntu mono;
+    font-size: 16px;
 }
 .postContent {
     padding: 0 60px;

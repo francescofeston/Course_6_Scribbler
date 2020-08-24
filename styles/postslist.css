@@ -94,6 +94,7 @@ body {
     -webkit-columns: 2 200px;
     -moz-columns: 2 200px;
          columns: 2 200px;
+    padding: 90px 0px;
 }
 
 .right {
