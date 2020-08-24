@@ -4,10 +4,93 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu Mono&display=swap" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet" type="text/css">
+    <link href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="styles/common.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>ScriBBler</title>     
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
-</body>
+    <div id="container-div">
+        <div class="header">
+            <!-- Insert code for Sign Up, Sign In button here. Add code for "ScriBBler" heading and the sub-heading -->
+            <input class="headerButton" type="button" onclick="toggleSignUpModal();" value="Sign Up">
+            <input class="headerButton" type="button" onclick="toggleSignInModal();" value="Sign In">
+            <div class="blogName">   
+                <p class="logo">ScriBBler</p>
+                <p class="subHeading">Explore, Imagine, Create</p>
+            </div>
+        </div>
+
+        <div class="postButtons">
+            <!-- Insert code for All Posts & Create Post button here -->
+            <input class="postBtn" type="button" id="allPosts" value="All Posts">
+            <input class="postBtn" type="button" onclick="toggleCreatePostModal();" value="Create Post">
+        </div>
+    </div>
+
+   <div class="modal" id="signInModal">
+        <!-- Insert code for Sign In modal here -->
+        <div class="headerModal">
+            <span class="modalClose" onclick="toggleSignInModal();">&times;</span>
+            <h1>Welcome Back!</h1>
+            <hr>
+            <form>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password" required>
+                <input id="signInBtn" type="submit" value="Sign In">
+            </form>
+            <h3>Not a member?
+                <a id="signUpRedirect" onclick="signUpModalRedirect();" href="javascript:void(0);">Sign Up</a>
+            </h3>
+        </div>
+    </div>
+
+    <div class="modal" id="signUpModal">
+        <!-- Insert code for Sign Up modal here -->
+        <div class="headerModal">
+            <span class="modalClose" onclick="toggleSignUpModal();">&times;</span>
+            <h1>Get Started</h1>
+            <hr>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" required>
+                <input id="signUpBtn" type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="createPostModal">
+        <!-- Insert code for Create Post modal here -->
+        <div class="createPostModalContent">
+            <span class="modalClose" onclick="toggleCreatePostModal();">&times;</span>
+            <h1>Pen Your Post</h1>
+            <form id="createPostForm">
+                <label>Title:</label>
+                <input type="text" id="postTitle" placeholder="Enter title of your post">
+                <label>Content:</label>
+                <textarea id="postContent" rows="15" cols="75" placeholder="Enter the contents of your post"></textarea>
+                <button id="createPostBtn">Create</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/index.js"></script>
+
+    </body>
 
 </html>
