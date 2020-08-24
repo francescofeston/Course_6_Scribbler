@@ -1,0 +1,177 @@
+.postItem {
+    position: relative;
+    width: 90%;
+    height: 20%;
+    background: #fff;
+    box-shadow:0 4px 10px 0 rgba(17, 4, 63, 0.2),0 4px 20px 0 rgba(79, 19, 97, 0.19);
+    margin: 10px 10px 10px 20px;
+    float:left;
+    border-radius: 15px;
+    flex: 0 45%;
+}
+.postItem:hover{
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(100, 92, 92);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px #ccc; 
+}
+
+@media only screen and (max-width: 500px){ 
+    .postItem{
+        width: 50%;
+        padding: 10px;
+    }
+    .post-title{
+        font-size: 15px;
+    }
+    .preview{
+        font-size: 12px;
+    }
+    .postAuthor{
+        font-size: 15px;
+    }
+    .trash-icon{
+        font-size: 10px;
+    }
+    .modal-body{
+    padding: 2px 14px 50px 14px;
+    }
+}
+
+.overview{
+    display: block;
+}
+.postAuthor {
+    width: 15%;
+    max-width: 15%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
+.post-card {
+    width: 75%;
+    display: table-cell;
+    text-align: left;
+    background-color: #E8E8E8;
+    color: #000000;
+    border-radius: 0 15px 15px 0;
+    padding: 0 20px;
+}
+.post-title {
+    display: inline-block;
+    font-weight: bold;
+    color: #2b312b;
+    font-size: 18px;
+    height: 25px;
+    width: 70%;
+}
+
+.preview {
+    max-height: 110px;
+    min-height: 20px;
+    height: 55px;
+    /* margin-bottom: 0 !important; */
+    overflow: hidden;
+
+}
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0 !important;
+    color: #fff;
+    background-color: #ffeedd; 
+    background-size: 2000% 2000%;
+}
+.postsContainer {
+    
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row wrap;
+    display: flex;
+    -webkit-columns: 2 200px;
+    -moz-columns: 2 200px;
+         columns: 2 200px;
+}
+
+.right {
+    float: right;
+}
+.trash-icon {
+    float: right;
+    margin: 3%;
+    font-size: 24px !important;
+    cursor: pointer;
+}
+
+/* modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    color:black;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* modal content */
+.modal-content {
+    position: relative;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    font-family: 'Abel', sans-serif;
+}
+
+/* add animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+.btn-modal {
+    border: none;
+    color: white;
+    padding: 14px 50px;
+    cursor: pointer;
+}
+.color-black {
+    color:black;
+}
+.red-btn {
+    background-color: #f44336;
+    width: 155px;
+}
+.red-btn:hover {
+    background: #da190b;
+}
+.green-btn {
+    background-color: #4cae50;
+    width: 155px;
+}
+.green-btn:hover {
+    background: #409243;
+}
+.modal-body {
+    padding: 5%;
+    background: white !important;
+}
+
